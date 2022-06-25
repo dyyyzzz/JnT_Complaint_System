@@ -1,4 +1,5 @@
 <?php
+
 require_once "config.php";
  
 $username = $password = $confirm_password = "";
