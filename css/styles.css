@@ -10,7 +10,7 @@
   --bs-yellow: #e4c662;
   --bs-green: #b62832;
   --bs-teal: #b62832;
-  --bs-cyan: #1cabc4;
+  --bs-cyan: #b62832;
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
@@ -26,7 +26,7 @@
   --bs-primary: #b62832;
   --bs-secondary: #7464a1;
   --bs-success: #b62832;
-  --bs-info: #1cabc4;
+  --bs-info: #b62832;
   --bs-warning: #e4c662;
   --bs-danger: #a16468;
   --bs-light: #f8f9fa;
@@ -3574,11 +3574,11 @@ textarea.form-control-lg {
 
 .btn-link {
   font-weight: 400;
-  color: #64a19d;
+  color: #b62832;
   text-decoration: underline;
 }
 .btn-link:hover {
-  color: #50817e;
+  color: #b62832;
 }
 .btn-link:disabled, .btn-link.disabled {
   color: #6c757d;
