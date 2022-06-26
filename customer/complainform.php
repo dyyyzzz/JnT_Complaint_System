@@ -22,7 +22,7 @@
         </fieldset>
         <input type="submit" value="File Complaint">
         </form>
-        <div align="center"><a href="welcome.php" class="btn">Back</a>
+        <div align="center"><a href="customer/welcome.php" class="btn">Back</a>
         </div> 
     </form>
 </body>
