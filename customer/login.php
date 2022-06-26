@@ -37,7 +37,7 @@
                         name="login" value="Sign In">
             </div>
             <p>Don't have an account? <a href="register.php">register now</a>.</p>
-            <a href="stafflogin.php">Staff</a>
+
         </form>
     </div>
 </body>
