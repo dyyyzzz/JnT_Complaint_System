@@ -7,6 +7,7 @@ $_SESSION = array();
  
 // Destroy the session.
 session_destroy();
+session ();
 
  
 // Redirect to login page
