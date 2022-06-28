@@ -9,7 +9,6 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="login.css">
 	<title>Staff Login Page</title>
-	<title> hau </title>
 </head>
 
 <body>
