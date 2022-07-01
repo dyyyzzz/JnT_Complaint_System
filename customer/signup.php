@@ -16,26 +16,26 @@
           <?php } ?>
 
           <label>Name</label>
-          <?php if (isset($_GET['name'])) { ?>
+          <?php if (isset($_GET['Cust_Name'])) { ?>
                <input type="text" 
-                      name="name" 
+                      name="Cust_Name" 
                       placeholder="Name"
                       value="<?php echo $_GET['Cust_Name']; ?>"><br>
           <?php }else{ ?>
                <input type="text" 
-                      name="name" 
+                      name="Cust_Name" 
                       placeholder="Name"><br>
           <?php }?>
 
           <label>User Name</label>
           <?php if (isset($_GET['Cust_Username'])) { ?>
                <input type="text" 
-                      name="uname" 
+                      name="Cust_Username" 
                       placeholder="User Name"
                       value="<?php echo $_GET['Cust_Username']; ?>"><br>
           <?php }else{ ?>
                <input type="text" 
-                      name="uname" 
+                      name="Cust_Username" 
                       placeholder="User Name"><br>
           <?php }?>
 
