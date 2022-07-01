@@ -18,7 +18,7 @@ if (isset($_POST['Cust_Username']) && isset($_POST['Cust_Password'])
 	$re_pass = validate($_POST['re_Cust_Password']);
 	$name = validate($_POST['Cust_Name']);
 
-	$user_data = 'uname='. $uname. '&name='. $name;
+	$user_data = 'Cust_Username='. $uname. '&Cust_Name='. $name;
 
 
 	if (empty($uname)) {
