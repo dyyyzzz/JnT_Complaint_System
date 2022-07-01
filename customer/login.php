@@ -1,44 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href=
-"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="login.css">
-	<title>Login Page</title>
-</head>
-<body>
-    <div class="wrapper">
-        <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
+<?php 
+session_start(); 
+include "db_conn.php";
 
-        <?php 
-        if(!empty($login_err)){
-            echo '<div class="alert alert-danger">' . $login_err . '</div>';
-        }        
-        ?>
+if (isset($_POST['uname']) && isset($_POST['password'])) {
 
-        <form action="vanlidate.php" method="post">
-            <div class="textbox">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <input type="text" placeholder="Username"
-                            name="Cust_username" value="">
-                </div>
+	function validate($data){
+       $data = trim($data);
+	   $data = stripslashes($data);
+	   $data = htmlspecialchars($data);
+	   return $data;
+	}
 
-                <div class="textbox">
-                    <i class="fa fa-lock" aria-hidden="true"></i>
-                    <input type="password" placeholder="Password"
-                            name="Cust_password" value="">
-                </div>
+	$uname = validate($_POST['uname']);
+	$pass = validate($_POST['password']);
 
-                <input class="button" type="submit"
-                        name="login" value="Sign In">
-            </div>
-            <p>Don't have an account? <a href="register.php">register now</a>.</p>
+	if (empty($uname)) {
+		header("Location: index.php?error=User Name is required");
+	    exit();
+	}else if(empty($pass)){
+        header("Location: index.php?error=Password is required");
+	    exit();
+	}else{
+		// hashing the password
+        $pass = md5($pass);
 
-        </form>
-    </div>
-</body>
-</html>
+        
+		$sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
+
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) === 1) {
+			$row = mysqli_fetch_assoc($result);
+            if ($row['user_name'] === $uname && $row['password'] === $pass) {
+            	$_SESSION['user_name'] = $row['user_name'];
+            	$_SESSION['name'] = $row['name'];
+            	$_SESSION['id'] = $row['id'];
+            	header("Location: home.php");
+		        exit();
+            }else{
+				header("Location: index.php?error=Incorect User name or password");
+		        exit();
+			}
+		}else{
+			header("Location: index.php?error=Incorect User name or password");
+	        exit();
+		}
+	}
+	
+}else{
+	header("Location: index.php");
+	exit();
+}
