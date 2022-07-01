@@ -20,7 +20,7 @@
                <input type="text" 
                       name="name" 
                       placeholder="Name"
-                      value="<?php echo $_GET['name']; ?>"><br>
+                      value="<?php echo $_GET['Cust_Name']; ?>"><br>
           <?php }else{ ?>
                <input type="text" 
                       name="name" 
@@ -32,7 +32,7 @@
                <input type="text" 
                       name="uname" 
                       placeholder="User Name"
-                      value="<?php echo $_GET['uname']; ?>"><br>
+                      value="<?php echo $_GET['Cust_Username']; ?>"><br>
           <?php }else{ ?>
                <input type="text" 
                       name="uname" 
@@ -42,7 +42,7 @@
 
      	<label>Password</label>
      	<input type="password" 
-                 name="password" 
+                 name="Cust_Password" 
                  placeholder="Password"><br>
 
           <label>Re Password</label>

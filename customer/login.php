@@ -25,7 +25,7 @@ if (isset($_POST['Cust_Username']) && isset($_POST['Cust_Password'])) {
         $pass = md5($pass);
 
         
-		$sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
+		$sql = "SELECT * FROM customer WHERE Cust_Username='$uname' AND Cust_Password='$pass'";
 
 		$result = mysqli_query($conn, $sql);
 
