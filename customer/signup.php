@@ -15,7 +15,7 @@
                <p class="success"><?php echo $_GET['success']; ?></p>
           <?php } ?>
 
-          <label>Name</label>
+          <label>Cust_Name</label>
           <?php if (isset($_GET['name'])) { ?>
                <input type="text" 
                       name="name" 
@@ -27,7 +27,7 @@
                       placeholder="Name"><br>
           <?php }?>
 
-          <label>User Name</label>
+          <label>Cust_Username</label>
           <?php if (isset($_GET['uname'])) { ?>
                <input type="text" 
                       name="uname" 
@@ -40,7 +40,7 @@
           <?php }?>
 
 
-     	<label>Password</label>
+     	<label>Cust_Password</label>
      	<input type="password" 
                  name="password" 
                  placeholder="Password"><br>
