@@ -10,11 +10,11 @@
      	<?php if (isset($_GET['error'])) { ?>
      		<p class="error"><?php echo $_GET['error']; ?></p>
      	<?php } ?>
-     	<label>Cust_Username</label>
-     	<input type="text" name="uname" placeholder="User Name"><br>
+     	<label>User Name</label>
+     	<input type="text" name="Cust_Username" placeholder="Cust_Username"><br>
 
-     	<label>Cust_Password</label>
-     	<input type="password" name="password" placeholder="Password"><br>
+     	<label>Password</label>
+     	<input type="password" name="Cust_Password" placeholder="Cust_Password"><br>
 
      	<button type="submit">Login</button>
           <a href="signup.php" class="ca">Create an account</a>

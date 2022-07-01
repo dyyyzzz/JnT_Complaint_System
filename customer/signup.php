@@ -15,35 +15,35 @@
                <p class="success"><?php echo $_GET['success']; ?></p>
           <?php } ?>
 
-          <label>Cust_Name</label>
+          <label>Name</label>
           <?php if (isset($_GET['name'])) { ?>
                <input type="text" 
                       name="name" 
-                      placeholder="Name"
+                      placeholder="Cust_Name"
                       value="<?php echo $_GET['name']; ?>"><br>
           <?php }else{ ?>
                <input type="text" 
                       name="name" 
-                      placeholder="Name"><br>
+                      placeholder="Cust_Name"><br>
           <?php }?>
 
-          <label>Cust_Username</label>
+          <label>User Name</label>
           <?php if (isset($_GET['uname'])) { ?>
                <input type="text" 
-                      name="uname" 
+                      name="Username" 
                       placeholder="User Name"
-                      value="<?php echo $_GET['uname']; ?>"><br>
+                      value="<?php echo $_GET['Cust_Username']; ?>"><br>
           <?php }else{ ?>
                <input type="text" 
                       name="uname" 
-                      placeholder="User Name"><br>
+                      placeholder="Cust_Username"><br>
           <?php }?>
 
 
-     	<label>Cust_Password</label>
+     	<label>Password</label>
      	<input type="password" 
                  name="password" 
-                 placeholder="Password"><br>
+                 placeholder="Cust_Password"><br>
 
           <label>Re Password</label>
           <input type="password" 
