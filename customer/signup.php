@@ -28,7 +28,7 @@
           <?php }?>
 
           <label>User Name</label>
-          <?php if (isset($_GET['uname'])) { ?>
+          <?php if (isset($_GET['Cust_Username'])) { ?>
                <input type="text" 
                       name="uname" 
                       placeholder="User Name"
