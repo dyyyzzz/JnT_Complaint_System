@@ -47,7 +47,7 @@
 
           <label>Re Password</label>
           <input type="password" 
-                 name="Cust_Password" 
+                 name="re_Cust_Password" 
                  placeholder="Re_Password"><br>
 
      	<button type="submit">Sign Up</button>
