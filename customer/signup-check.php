@@ -3,7 +3,7 @@ session_start();
 include "db_conn.php";
 
 if (isset($_POST['Cust_Username']) && isset($_POST['Cust_Password'])
-    && isset($_POST['Cust_Name']) && isset($_POST['re_Cust_Password'])) {
+    && isset($_POST['Cust_Name']) && isset($_POST['re_Password'])) {
 
 	function validate($data){
        $data = trim($data);
@@ -15,7 +15,7 @@ if (isset($_POST['Cust_Username']) && isset($_POST['Cust_Password'])
 	$uname = validate($_POST['Cust_Name']);
 	$pass = validate($_POST['Cust_Password']);
 
-	$re_pass = validate($_POST['re_Cust_Password']);
+	$re_pass = validate($_POST['re_Password']);
 	$name = validate($_POST['Cust_Name']);
 
 	$user_data = 'Cust_Username='. $uname. '&Cust_Name='. $name;
