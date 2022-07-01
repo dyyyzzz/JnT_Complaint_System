@@ -55,7 +55,7 @@ if (isset($_POST['Cust_Username']) && isset($_POST['Cust_Password'])
 			header("Location: signup.php?error=The username is taken try another&$user_data");
 	        exit();
 		}else {
-           $sql2 = "INSERT INTO users(Cust_Username, Cust_Password, Cust_Name) VALUES('$uname', '$pass', '$name')";
+           $sql2 = "INSERT INTO customer(Cust_Username, Cust_Password, Cust_Name) VALUES('$uname', '$pass', '$name')";
            $result2 = mysqli_query($conn, $sql2);
            if ($result2) {
            	 header("Location: signup.php?success=Your account has been created successfully");
