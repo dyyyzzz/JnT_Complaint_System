@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "config.php";
+require_once "db_conn.php";
  
 // Define variables and initialize with empty values
 $Cust_username = $Cust_password = "";
